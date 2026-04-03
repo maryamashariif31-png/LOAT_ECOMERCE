@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOAT - Leader Of All Time</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">LOAT</div>
+  <div class="menu-btn">☰</div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#blog">Blog</a>
+    <a href="#about">About</a>
+     <a href="#cart">Cart</a>
+    <a href="#contact">Contact</a>
+   
+  </div>
+</nav>
+
+<!-- SECTION 1: HERO -->
+<section id="home" class="hero">
+  <h1>Leader Of All Time</h1>
+  <p>Welcome to LOAT – premium tech products and innovation hub. Experience future commerce with style, performance, and AI-ready technology.</p>
+  <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore Now</button>
+</section>
+
+<!-- SECTION 2: PRODUCTS -->
+<section id="products">
+  <h2 class="section-title">Featured Products</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="ulter.png">
+      <h3>Ultra Laptop</h3>
+      <p>Powerful performance for creators.</p>
+      <p class="price">$1100</p>
+      <button class="btn" onclick="addCart('Ultra Laptop')"><i class="fas fa-cart-plus"></i> Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="smart.png">
+      <h3>X</h3>
+      <p>Next-gen smartphone experience.</p>
+      <p class="price">$850</p>
+      <button class="btn" onclick="addCart('Smart Phone X')"><i class="fas fa-cart-plus"></i> Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="wriless.png">
+      <h3>Wireless Headset</h3>
+      <p>Immersive sound with comfort.</p>
+      <p class="price">$250</p>
+      <button class="btn" onclick="addCart('Wireless Headset')"><i class="fas fa-cart-plus"></i> Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="watch.png">
+      <h3>Smart Watch Pro</h3>
+      <p>Track health & notifications seamlessly.</p>
+      <p class="price">$320</p>
+      <button class="btn" onclick="addCart('Smart Watch Pro')"><i class="fas fa-cart-plus"></i> Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="VR.png">
+      <h3>VR Glasses</h3>
+      <p>Next-level virtual reality experience.</p>
+      <p class="price">$450</p>
+      <button class="btn" onclick="addCart('VR Glasses')"><i class="fas fa-cart-plus"></i> Add Cart</button>
+    </div>
+    <div class="card">
+      <img src="games.png">
+      <h3>Gaming Console X</h3>
+      <p>High performance gaming platform.</p>
+      <p class="price">$600</p>
+      <button class="btn" onclick="addCart('Gaming Console X')"><i class="fas fa-cart-plus"></i> Add Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SERVICES -->
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="service">
+      <i class="fas fa-truck"></i>
+      <h3>Fast Delivery</h3>
+      <p>Global shipping with tracking and reliability.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-lock"></i>
+      <h3>Secure Payment</h3>
+      <p>Encrypted and safe transactions for all customers.</p>
+    </div>
+    <div class="service">
+      <i class="fas fa-headset"></i>
+      <h3>24/7 Support</h3>
+      <p>Live support anytime for assistance and queries.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: BLOG -->
+<section id="blog">
+  <h2 class="section-title">Innovation Blog</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <h3>Future Commerce</h3>
+      <p>Discover AI-driven ecommerce and automation insights.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+      <h3>Startup Innovation</h3>
+      <p>Technology startups reshaping digital shopping.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: ABOUT -->
+<section id="about">
+  <h2 class="section-title">About LOAT</h2>
+  <div class="card">
+    <p>"The Lost Leader" is a famous poem by Robert Browning (1845). It criticizes William Wordsworth who abandoned early liberal ideals for conservative gains. Wordsworth betrayed followers "just for a handful of silver" and a ribbon. Browning conveys deep disappointment, marking the leader as the primary "lost leader" of the literary world.</p>
+  </div>
+</section>
+
+
+
+<!-- SECTION 7: CART -->
+<section id="cart">
+  <h2 class="section-title">Shopping Cart</h2>
+
+  <div class="container cart-container">
+    <!-- CART ITEMS -->
+    <div class="cart-items">
+      <div class="cart-item" data-price="1100">
+        <div class="cart-item-details">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="">
+          <div class="cart-item-info">
+            <h3>Ultra Laptop</h3>
+            <p>Powerful performance for creators.</p>
+          </div>
+        </div>
+        <div class="quantity">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <p class="price">$1100</p>
+        <i class="fas fa-trash delete-btn"></i>
+      </div>
+
+      <div class="cart-item" data-price="850">
+        <div class="cart-item-details">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
+          <div class="cart-item-info">
+            <h3>Smart Phone X</h3>
+            <p>Next-gen smartphone experience.</p>
+          </div>
+        </div>
+        <div class="quantity">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <p class="price">$850</p>
+        <i class="fas fa-trash delete-btn"></i>
+      </div>
+
+      <div class="cart-item" data-price="250">
+        <div class="cart-item-details">
+          <img src="https://images.unsplash.com/photo-1580910051071-8eec5b16f71d" alt="">
+          <div class="cart-item-info">
+            <h3>Wireless Headset</h3>
+            <p>Immersive sound with comfort.</p>
+          </div>
+        </div>
+        <div class="quantity">
+          <button class="decrease">-</button>
+          <span class="count">1</span>
+          <button class="increase">+</button>
+        </div>
+        <p class="price">$250</p>
+        <i class="fas fa-trash delete-btn"></i>
+      </div>
+
+    </div>
+
+    <!-- CHECKOUT -->
+    <div class="checkout">
+      <h2>Card Details</h2>
+      <div class="card-types">
+        <img src="https://img.icons8.com/color/48/000000/visa.png"/>
+        <img src="https://img.icons8.com/color/48/000000/mastercard.png"/>
+        <img src="https://img.icons8.com/color/48/000000/paypal.png"/>
+      </div>
+      <input type="text" placeholder="Cardholder's Name">
+      <input type="text" placeholder="Card Number">
+      <div style="display:flex; gap:10px;">
+        <input type="text" placeholder="Expiration">
+        <input type="text" placeholder="CVV">
+      </div>
+      <p>Subtotal: $<span id="subtotal">0</span></p>
+      <p>Shipping: $<span id="shipping">20</span></p>
+      <p>Total: $<span id="total">0</span></p>
+      <button id="checkout">CHECKOUT</button>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SECTION 6: CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>LOAT © 2026 Leader Of All Time</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
